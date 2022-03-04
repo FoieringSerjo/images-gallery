@@ -1,7 +1,7 @@
-import React from "react";
-import { Container, Row, Col, Button, Form } from "react-bootstrap";
+import React from 'react';
+import { Container, Row, Col, Button, Form } from 'react-bootstrap';
 
-const Search = ({ word, setWord, handleSubmit}) => {
+const Search = ({ word, setWord, handleSubmit }) => {
   return (
     <Container className="mt-4">
       <Row className="justify-content-center">
@@ -10,13 +10,16 @@ const Search = ({ word, setWord, handleSubmit}) => {
             <Row>
               <Col xs={9}>
                 <Form.Control
-                type="text"
-                value={word}
-                onChange={(event) => setWord(event.target.value)} 
-                placeholder="Search for new image..." />
+                  type="text"
+                  value={word}
+                  onChange={(event) => setWord(event.target.value)}
+                  placeholder="Search for new image..."
+                />
               </Col>
               <Col>
-                <Button variant="primary" type="submit">Search</Button>
+                <Button variant="primary" type="submit">
+                  Search
+                </Button>
               </Col>
             </Row>
           </Form>

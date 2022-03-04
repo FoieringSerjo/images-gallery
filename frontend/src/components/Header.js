@@ -1,9 +1,9 @@
 import React from 'react';
-import { Navbar, Container} from 'react-bootstrap';
+import { Navbar, Container } from 'react-bootstrap';
 
 const navbarStyle = {
-  backgroundColor: 'Lightblue'
-}
+  backgroundColor: 'Lightblue',
+};
 
 const Header = ({ title }) => {
   return (
@@ -12,7 +12,7 @@ const Header = ({ title }) => {
         <Navbar.Brand href="/"> {title} </Navbar.Brand>
       </Container>
     </Navbar>
-  )
+  );
 };
 
 export default Header;

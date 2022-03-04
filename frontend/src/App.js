@@ -11,21 +11,23 @@ function App() {
   const handleSearchSubmit = (event) => {
     event.preventDefault();
     console.log(word);
-    fetch(`https://api.unsplash.com/photos/random/?query=${word}&client_id=${UNSPLASH_KEY}`)
-    .then((resolve) => resolve.json())
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((err) => {
-      console.log(err);
-    })
-    setWord('')
-  }
+    fetch(
+      `https://api.unsplash.com/photos/random/?query=${word}&client_id=${UNSPLASH_KEY}`
+    )
+      .then((resolve) => resolve.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    setWord('');
+  };
 
   return (
     <div>
-      <Header title="Images Gallery"/>
-      <Search word={word} setWord={setWord} handleSubmit={handleSearchSubmit}/>
+      <Header title="Images Gallery" />
+      <Search word={word} setWord={setWord} handleSubmit={handleSearchSubmit} />
     </div>
   );
 }
